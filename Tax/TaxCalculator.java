@@ -19,7 +19,7 @@ class TaxNotEligibleException extends Exception {
 }
 
 class TaxCalculator {
-    public double calculateTax(String empName, boolean isIndian, double empSal) throws EmployeeNameInvalidException, CountryNotValidException, TaxNotEligibleException {
+    public double calculateTax(String empName, boolean isIndian, double empSal) throws Exception {
         if (empName == null || empName.trim().isEmpty()) {
             throw new EmployeeNameInvalidException("Employee name cannot be empty");
         }
